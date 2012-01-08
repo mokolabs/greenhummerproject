@@ -1,0 +1,112 @@
+<?php
+
+// Process submission
+if ($submit) {
+
+	// Check for missing fields
+	if ($name == '' or 
+		$email == '' or
+		$phone == '' or
+		$available == '' or
+		$interests == '') {
+
+		if ($name == '') $missing_fields .= '&bull; Name<br />';
+		if ($email == '') $missing_fields .= '&bull; Email Address<br />';
+		if ($phone == '') $missing_fields .= '&bull; Phone Number<br />';
+		if ($available == '') $missing_fields .= '&bull; Availability<br />';
+		if ($interests == '') $missing_fields .= '&bull; Skills/Interests<br />';
+
+		$layout = 'volunteer_failure';
+
+	// If none, show success page
+	} else {
+
+		// Trim inputs
+		$name = trim($name);
+		$email = trim($email);
+		$phone = trim($phone);
+		$available = trim($available);
+		$interests = trim($interests);
+
+		// Wordwrap availability/skills
+		$available = wordwrap($available);
+		$interests = wordwrap($interests);
+
+		$layout = 'volunteer_success';
+	}
+
+// Show form (default)
+} else {
+
+	$layout = 'volunteer_form';
+
+}
+
+// SEND EMAIL
+if ($layout == 'volunteer_success' and $submit) {
+
+// Send volunteer info to GHP
+mail ('info@greenhummerproject.org', "New Volunteer: $name", 
+"I'd like to volunteer for the Green Hummer Project!
+
+...
+
+Name:
+$name
+
+Email Address:
+$email
+
+Phone Number:
+$phone
+
+Availability:
+$available
+
+Skills/Interests:
+$interests
+","From:$name <$email>");
+
+// Send response from GHP
+mail ("$email", "Thanks for your interest in the Green Hummer Project!", 
+"We've received your volunteer request and will contact you shortly.
+
+Thanks for your interest!
+
+Sincerely,
+The Green Hummer Project
+http://greenhummerproject.org
+
+","From:Green Hummer Project <info@greenhummerproject.org>");
+}
+
+include("pm_inc.php");
+
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/2000/REC-xhtml1-20000126/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Green Hummer Project: Volunteer</title>
+	<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" />
+	<link rel="stylesheet" type="text/css" href="/style.css" />
+	<link rel="SHORTCUT ICON" href="/images/favicon.png" />
+</head>
+<body>
+
+<!-- MENU start -->
+<?php include("tmpl/menu.html"); ?>
+<!-- MENU end -->
+
+<!-- CONTENT start -->
+<div id="content">
+<form action="volunteer.php" method="post">
+
+<?php include(realpath("./tmpl/$layout.html")); ?>
+
+</form>
+</div>
+<!-- CONTENT end -->
+
+</body>
+</html>

@@ -1,0 +1,287 @@
+/* Layout */
+
+body {
+	background-color: #FFEF00;
+	font: 14px Helvetica, Geneva, sans-serif;
+	color: #060;
+	text-align: center;
+	margin-left: 20px;
+	margin-bottom: 10px;
+	}
+
+#logo {
+	margin-bottom: 0px;
+	padding-bottom: 10px;
+	border-bottom: 1px dotted #060;
+	}
+
+#menu {
+	float: left;
+	width: 225px;
+	text-align: left;
+	}
+
+#content {
+	/* background: #FFF34F; */
+	float: left;
+	padding: 10px;
+	margin: 20px 0px 20px 20px;
+	border: 4px dotted #060;
+	text-align: left;
+	width: 550px; /* ie5win fudge begins */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width: 520px;
+	}
+html>body #content {
+	width: 520px; /* ie5win fudge ends */
+	}
+
+#content_alt {
+	/* background: #FFF34F; */
+	float: left;
+	padding: 10px;
+	margin: 20px 0px 20px 20px;
+	border: 4px dotted #060;
+	text-align: left;
+	background-image: url("/images/background.jpg");
+	background-repeat: no-repeat;
+	background-position: top center;
+	width: 550px; /* ie5win fudge begins */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width: 520px;
+	}
+html>body #content_alt {
+	width: 520px; /* ie5win fudge ends */
+	}
+
+.clip {
+	float: left;
+	width: 250px;
+	margin-left: 10px;
+	text-align: left;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	}
+
+.clip_pic {
+	border: 1px solid #060;
+	}
+
+.crew_pics {
+	margin-top: 10px;
+	text-align: center;
+	}
+
+.video {
+	text-align: center;
+	margin-bottom: 0;
+	}
+
+.quicktime {
+	text-align: center;
+	font-size: 12px;
+	border: 1px dotted #060;
+	margin: 0px 10px 10px 10px;
+	padding: 10px;
+	}
+
+.weblog {
+	padding-bottom: 20px;
+	margin-bottom: 14px;
+	border-bottom: 1px dotted #060;
+	}
+	
+.date {
+	margin-top: 32px;
+	font-weight: bold;
+	}
+
+.comments {
+	float: right;
+	}
+
+.more {
+	float: left;
+	}
+
+.stats {
+	font-size: 12px;
+	font-style: italic;
+	}
+
+.filler {
+	height: 370px;
+	}
+
+.filler2 {
+	height: 250px;
+	}
+
+.line {
+	padding: 0;
+	margin-top: -14px;
+	border-bottom: 1px dotted #060;
+	}
+ 
+.textarea {
+	margin-top: 14px;
+	}
+
+.comment {
+	border-bottom: 1px dotted #060;
+	padding-bottom: 14px;
+	font-size: 12px;
+	}
+
+.right {
+	font-weight: bold;
+	width: 220px;
+	}
+
+.faq {
+	margin: 0;
+	padding: 0;
+	}
+
+#faq h2 {
+	margin-bottom: -14px;
+	}
+
+.update {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 3px;
+	padding-left: 6px;
+	background-color: #060;
+	color: #ffef00;
+	line-height: 18px;
+	}
+
+.prev_page {
+	float: left;
+	font-weight: bold;
+	}
+	
+.next_page {
+	float: right;
+	font-weight: bold;
+	}
+
+#donate {
+	border-top: 1px dotted #060;
+	}
+
+/* Text */
+
+th {
+	text-align: center;
+	padding-bottom: 10px;
+	}
+
+td {
+	vertical-align: top;
+	text-align: center;
+	padding-bottom: 15px;
+	}
+
+h1 {
+	font-size: 24px;
+	margin: 0;
+	padding: 0;
+	margin-bottom: -6px;
+	}
+
+h1.ridelog {
+	margin-bottom: -24px;
+	}
+
+h2 {
+	font-size: 14px;
+	font-weight: bold;
+	border-bottom: 2px dotted #060;
+	margin-top: 12px;
+	}
+
+h2.ridelog {
+	font-size: 14px;
+	font-weight: bold;
+	border-bottom: 1px dotted #060;
+	margin-top: 0px;
+	padding-top: 36px;
+	}
+
+h2.faq {
+	font-size: 14px;
+	font-weight: bold;
+	margin-top: 14px;
+	border: none;
+	}
+	
+h3 {
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	}
+
+p {
+	}
+
+ul.nav {
+	list-style-type: none;
+	text-align: left;
+	font-size: 18px;
+	margin-left: 0;
+	padding-left: 0;
+	padding-bottom: 14px;
+	border-bottom: 1px dotted #060;
+	}
+
+ul.volunteer { }
+
+.cleaner {
+	clear: both;
+	height: 1px;
+	font-size: 1px;
+	border: none;
+	margin: 0;
+	padding: 0;
+	background: transparent;
+	}
+
+.spacer {
+	border-bottom: 1px dotted #060;
+	}
+
+.note {
+	padding-top: 6px;
+	margin-top: 12px;
+	border-top: 1px dotted #060;
+	font-size: 12px;
+	}
+
+.author {
+	font-size: 12px;
+	}
+
+/* Links */
+
+li a:link { text-decoration: none; }
+li a:visited { text-decoration: none; }
+li a:active { text-decoration: none; }
+li a:hover { text-decoration: underline; }
+
+a:link { color: #060; }
+a:visited { color: #060; }
+a:active { color: #060; }
+a:hover { color: #060; }
+
+a.title:link { color: #060; text-decoration: none; }
+a.title:visited { color: #060; text-decoration: none; }
+a.title:active { color: #060; text-decoration: none; }
+a.title:hover { color: #060; text-decoration: underline; }
+
+a.latest:link { color: #ffef00; }
+a.latest:visited { color: #ffef00; }
+a.latest:active { color: #ffef00; }
+a.latest:hover { color: #ffef00; }
