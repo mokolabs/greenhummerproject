@@ -3,7 +3,7 @@ require 'sinatra'
 require 'rack-rewrite'
 
 # APP
-require './server'
+require './app'
 
 use Rack::Rewrite do
   r301 %r{.*}, 'http://greenhummerproject.org$&', :if => Proc.new {|rack_env|
