@@ -1,8 +1,6 @@
-# GEMS
+# Load dependencies
 require 'sinatra'
 require 'rack-rewrite'
-
-# APP
 require './app'
 
 use Rack::Rewrite do
