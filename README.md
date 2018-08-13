@@ -1,6 +1,10 @@
 Green Hummer Project
 ====================
 
+**THIS APP IS ONLY FOR ARCHIVAL PURPOSES AND SHOULD NOT BE DEPLOYED**
+
+Currently, greenhummerproject.org is hosted as a static website on GoDaddy (and I'm no longer involved in the hosting of the site).
+
 ## Getting started
 
 ### Clone the app
